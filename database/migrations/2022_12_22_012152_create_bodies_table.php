@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('bodies', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('user_id')->constrained('users');
-            // $table->text('coordinate_name');
-            // $table->integer('clo_val');
+            $table->foreignId('user_id')->constrained('users');
+            $table->text('height');
+            $table->integer('weight');
+            $table->integer('age');
             $table->timestamps();
         });
     }
