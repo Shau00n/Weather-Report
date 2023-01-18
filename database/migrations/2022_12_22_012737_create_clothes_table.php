@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('clothes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('coordinate_id')->constrained('combinations'); 
+            $table->text('cloth_name');
+            // $table->integer('cloth_code');           
             $table->timestamps();
         });
     }
