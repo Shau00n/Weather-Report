@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('combinations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->text('codinate_name');
+            $table->text('coordinate_name');
             $table->integer('clo_val');
             $table->timestamps();
         });
